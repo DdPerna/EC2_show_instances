@@ -7,7 +7,7 @@ The output is displayed in a table showing the instance name, running state, pri
 First, clone the repository using git (recommended):
 
 ```bash
-git clone https://github.com/ddipernala5/EC2_show_instances.git
+git clone https://github.com/DdPerna/EC2_show_instances.git
 ```
 
 or download the script manually using this command:
