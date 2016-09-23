@@ -50,7 +50,7 @@ aws_secret_access_key = ACCESS_KEY
 ## Setup
  The script is setup to accept a region and two tag values then plugs them into the aws api call.
  This can be customized to your specific needs by customizing the filters section of the aws api call. 
- - For Example: to limit your search to instances with a tag called "Environment" that has the value of the user's second input
+ - For Example: to limit your search to instances with a tag called "Environment" that equals the value of the user's second input
  
  ENVIR=$2
  
