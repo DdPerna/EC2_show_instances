@@ -1,6 +1,6 @@
 # EC2_show_instances
 A simple Bash script for displaying EC2 instances based on region, and or tags. 
-
+The output is displayed in a table showing the instance name, running state, private and public ip, and region.
 
 ## Getting started
 
