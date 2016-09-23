@@ -6,10 +6,10 @@
 set -ue
 set -o pipefail
 
-
+# if the first input is empty then run the command on both regions
 if [ -z ${1+x} ]; then
 
-  REGION=( us-east-1 eu-central-1 )
+  REGION=( us-east-1 us-west-1 )
 
   for i in "${REGION[@]}"
    do
@@ -20,6 +20,7 @@ if [ -z ${1+x} ]; then
 
 fi
 
+# if first input is -h then display message
 if [ "$1" == "-h" ]; then
   echo ""
   echo "### Description ###"
@@ -40,7 +41,7 @@ if [ "$1" == "-h" ]; then
   exit 1
 fi
 
-
+# if the second input is empty then run the command on specified region
 if [ -z ${2+x} ]; then
 
   REGION=$1
@@ -49,6 +50,7 @@ if [ -z ${2+x} ]; then
 
   exit 1
 
+#if the third input is empty then run the command on the specified region and tag
 elif [ -z ${3+x} ]; then
 
   REGION=$1
@@ -58,6 +60,7 @@ elif [ -z ${3+x} ]; then
 
   exit 1
 
+# else assume three input's and run the command on specified region and tags
 else
 
   REGION=$1
